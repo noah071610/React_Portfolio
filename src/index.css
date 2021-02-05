@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
 html,
 body,
 div,
@@ -6,7 +8,6 @@ applet,
 object,
 iframe,
 h1,
-h3,
 h4,
 h5,
 h6,
@@ -100,8 +101,11 @@ nav,
 section {
   display: block;
 }
-body {
+body,
+html {
   line-height: 1;
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
 }
 ol,
 ul {
@@ -125,4 +129,18 @@ table {
 a {
   color: black;
   text-decoration: none;
+}
+
+p {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.marker {
+  background: linear-gradient(to top, #d5f7e6 30%, transparent 30%);
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
