@@ -1,9 +1,10 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import MainPage from "./views/MainPage";
+import MainPage from "./views/MainPage/MainPage";
 import { SquareBottom, SquareLeft, SquareRight } from "./views/common/Square";
 import Navigation from "./views/Nav";
 import Poster from "./views/Poster";
+import SkillPage from "./views/SkillPage/SkillPage";
 
 const App = () => {
   return (
@@ -20,10 +21,9 @@ const App = () => {
         >
           <Poster />
           <Navigation />
-
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/skills" component={MainPage} />
+            <Route exact path="/skills" component={SkillPage} />
           </Switch>
           <SquareLeft />
           <SquareRight />

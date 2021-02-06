@@ -39,8 +39,7 @@ function Poster() {
         <Heart src="/images/heart.png" />
         <img style={{ width: "80%" }} src="/images/posterImg.png" alt="posterImg" />
       </ImageWrapper>
-
-      <div style={{ textAlign: "center" }}>
+      <div style={{ width: "80%", textAlign: "center" }}>
         <h2>Jang Hyun Soo</h2>
         <p>Hi, I'm a Web Developer</p>
       </div>
