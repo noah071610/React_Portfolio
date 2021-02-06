@@ -36,6 +36,7 @@ function Navigation() {
   const linkSelectedHandler = (i) => {
     setSelected(i);
   };
+
   useEffect(() => {
     const scrollCallBack = window.addEventListener("scroll", () => {
       if (window.scrollY > 493) {
@@ -72,7 +73,7 @@ function Navigation() {
               onClick={() => linkSelectedHandler(i)}
               style={{ transition: "0.3s" }}
             >
-              <NavLink to={v.link}>
+              <NavLink style={i === Selected ? { border: "3px solid #D5F7E6" } : {}} to={v.link}>
                 <FontAwesomeIcon icon={v.name} />
                 {i === Selected ? <span style={{ marginLeft: "1rem" }}>{v.explain}</span> : null}
               </NavLink>
