@@ -1,29 +1,37 @@
-import React, { Suspense, useEffect, useState } from "react";
-import Article from "./views/Article";
-import { SquareBottom } from "./views/common/Square";
+import React, { Suspense } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import MainPage from "./views/MainPage";
+import { SquareBottom, SquareLeft, SquareRight } from "./views/common/Square";
 import Navigation from "./views/Nav";
 import Poster from "./views/Poster";
 
-function App() {
+const App = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div
-        style={{
-          position: "relative",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Poster />
-        <Navigation />
+      <BrowserRouter>
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            overflow: "hidden",
+          }}
+        >
+          <Poster />
+          <Navigation />
 
-        <Article />
-        <SquareBottom />
-      </div>
+          <Switch>
+            <Route exact path="/" component={MainPage} />
+            <Route exact path="/skills" component={MainPage} />
+          </Switch>
+          <SquareLeft />
+          <SquareRight />
+          <SquareBottom />
+        </div>
+      </BrowserRouter>
     </Suspense>
   );
-}
+};
 
 export default App;

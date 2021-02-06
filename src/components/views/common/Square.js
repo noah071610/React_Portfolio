@@ -22,7 +22,7 @@ export const SquareRight = () => {
         width: "200px",
         height: "200px",
         right: "-140px",
-        bottom: "0",
+        top: "200px",
         transform: "rotateZ(45deg)",
         backgroundColor: "#D5F7E6",
         zIndex: "-1",

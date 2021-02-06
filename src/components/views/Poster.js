@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
-import { SquareRight, SquareLeft } from "./common/Square";
 
 const turning = keyframes`
 to {
@@ -33,6 +32,7 @@ function Poster() {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+        marginBottom: "3rem",
       }}
     >
       <ImageWrapper>
@@ -43,10 +43,6 @@ function Poster() {
       <div style={{ textAlign: "center" }}>
         <h2>Jang Hyun Soo</h2>
         <p>Hi, I'm a Web Developer</p>
-      </div>
-      <div>
-        <SquareLeft />
-        <SquareRight />
       </div>
     </div>
   );

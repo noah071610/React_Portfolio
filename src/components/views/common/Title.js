@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { GRAY_COLOR, MAIN_COLOR } from "../../config";
 
-const Div = styled.div`
+const Line = styled.div`
   position: relative;
   margin-bottom: 3rem;
   width: 100%;
@@ -24,7 +24,7 @@ function Title(props) {
   return (
     <>
       <h2 style={{ margin: 0, padding: "1.5rem 0" }}>{props.title}</h2>
-      <Div></Div>
+      <Line></Line>
     </>
   );
 }

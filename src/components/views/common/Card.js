@@ -58,6 +58,7 @@ const Img = styled.div`
 
 const H4 = styled.h4`
   background-color: white;
+  user-select: none;
   &:before {
     content: "";
     position: absolute;
@@ -89,7 +90,7 @@ function Card(props) {
           <H4>{contents.squareTitle}</H4>
         </Img>
       </ValueSquare>
-      <div>
+      <div style={{ width: "100%" }}>
         <h3>{contents.title}</h3>
         <p>{contents.desc}</p>
       </div>
