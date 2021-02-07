@@ -4,7 +4,6 @@ import { GRAY_COLOR, MAIN_COLOR } from "../../config";
 
 const Line = styled.div`
   position: relative;
-  margin-bottom: 3rem;
   width: 100%;
   height: 1px;
   background-color: ${GRAY_COLOR};
@@ -23,8 +22,9 @@ const Line = styled.div`
 function Title(props) {
   return (
     <>
-      <h2 style={{ margin: 0, padding: "1.5rem 0" }}>{props.title}</h2>
+      <h2 style={{ margin: 0, padding: "1.5rem 0 0.5rem 0" }}>{props.title}</h2>
       <Line></Line>
+      <h3 style={{ margin: "0.5rem 0 3rem 0", color: "gray" }}>{props.sub}</h3>
     </>
   );
 }

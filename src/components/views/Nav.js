@@ -20,7 +20,8 @@ const NavLink = styled(Link)`
   height: 100%;
   justify-content: center;
   align-items: center;
-  border-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   transition: 0.3s;
   color: black;
   &:hover {
@@ -73,7 +74,16 @@ function Navigation() {
               onClick={() => linkSelectedHandler(i)}
               style={{ transition: "0.3s" }}
             >
-              <NavLink style={i === Selected ? { border: "3px solid #D5F7E6" } : {}} to={v.link}>
+              <NavLink
+                style={
+                  i === Selected
+                    ? {
+                        borderBottom: `1px solid ${SUB_COLOR}`,
+                      }
+                    : {}
+                }
+                to={v.link}
+              >
                 <FontAwesomeIcon icon={v.name} />
                 {i === Selected ? <span style={{ marginLeft: "1rem" }}>{v.explain}</span> : null}
               </NavLink>
