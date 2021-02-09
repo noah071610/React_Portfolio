@@ -34,10 +34,6 @@ function Navigation() {
   const [FixedNavbar, setFixedNavbar] = useState(false);
   const [Selected, setSelected] = useState(0);
 
-  const linkSelectedHandler = (i) => {
-    setSelected(i);
-  };
-
   useEffect(() => {
     const scrollCallBack = window.addEventListener("scroll", () => {
       if (window.scrollY > 493) {
@@ -71,7 +67,7 @@ function Navigation() {
             <Col
               data-value={i}
               span={i === Selected ? 8 : 4}
-              onClick={() => linkSelectedHandler(i)}
+              onClick={() => setSelected(i)}
               style={{ transition: "0.3s" }}
             >
               <NavLink

@@ -5,6 +5,7 @@ import { SquareBottom, SquareLeft, SquareRight } from "./views/common/Square";
 import Navigation from "./views/Nav";
 import Poster from "./views/Poster";
 import SkillPage from "./views/SkillPage/SkillPage";
+import PortfolioPage from "./views/PortfolioPage/PortfolioPage";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={MainPage} />
             <Route exact path="/skills" component={SkillPage} />
+            <Route exact path="/portfolio" component={PortfolioPage} />
           </Switch>
           <SquareLeft />
           <SquareRight />
