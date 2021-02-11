@@ -30,9 +30,17 @@ const NavLink = styled(Link)`
   }
 `;
 
-function Navigation() {
+const Navigation = () => {
   const [FixedNavbar, setFixedNavbar] = useState(false);
   const [Selected, setSelected] = useState(0);
+
+  const onClickHandler = (i) => {
+    setSelected(i);
+    window.scrollTo({
+      top: 494,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const scrollCallBack = window.addEventListener("scroll", () => {
@@ -49,8 +57,20 @@ function Navigation() {
   }, []);
   const contents = [
     { name: faAddressCard, content: "Introduce me 😄", explain: "About me", link: "/" },
-    { name: faLaptop, content: "Know about my skill-set 👨‍💼", explain: "Skills", link: "/skills" },
-    { name: faImages, content: "Teste my portfolio 🖼️", explain: "Portfolio", link: "/portfolio" },
+    {
+      name: faLaptop,
+      content: "Know about my skill-set 👨‍💼",
+      explain: "Skills",
+      link: "/skills",
+      image: "skill_poster.png",
+    },
+    {
+      name: faImages,
+      content: "Teste my portfolio 🖼️",
+      explain: "Portfolio",
+      link: "/portfolio",
+      image: "port_poster.jpg",
+    },
     { name: faBlog, content: "Come to my blog ✏️", explain: "My Blog", link: "/blog" },
     {
       name: faEnvelope,
@@ -67,7 +87,7 @@ function Navigation() {
             <Col
               data-value={i}
               span={i === Selected ? 8 : 4}
-              onClick={() => setSelected(i)}
+              onClick={() => onClickHandler(i)}
               style={{ transition: "0.3s" }}
             >
               <NavLink
@@ -76,12 +96,12 @@ function Navigation() {
                     ? {
                         borderBottom: `1px solid ${SUB_COLOR}`,
                       }
-                    : {}
+                    : null
                 }
                 to={v.link}
               >
                 <FontAwesomeIcon icon={v.name} />
-                {i === Selected ? <span style={{ marginLeft: "1rem" }}>{v.explain}</span> : null}
+                {i === Selected && <span style={{ marginLeft: "1rem" }}>{v.explain}</span>}
               </NavLink>
             </Col>
           </Popover>
@@ -89,6 +109,6 @@ function Navigation() {
       </Row>
     </>
   );
-}
+};
 
 export default Navigation;
