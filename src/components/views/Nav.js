@@ -14,6 +14,8 @@ import Popover from "antd/lib/popover";
 import Row from "antd/lib/row";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { PAGE_CHANGE } from "../../_reducers";
 
 const NavLink = styled(Link)`
   display: flex;
@@ -31,15 +33,21 @@ const NavLink = styled(Link)`
 `;
 
 const Navigation = () => {
+  const dispatch = useDispatch();
   const [FixedNavbar, setFixedNavbar] = useState(false);
-  const [Selected, setSelected] = useState(0);
+  const { pageNumber } = useSelector((state) => state.reducer);
 
   const onClickHandler = (i) => {
-    setSelected(i);
-    window.scrollTo({
-      top: 494,
-      behavior: "smooth",
+    dispatch({
+      type: PAGE_CHANGE,
+      pageNumber: i,
+      posterName: contents[i].name,
     });
+    if (window.scrollY > 493) {
+      window.scrollTo({
+        top: 0,
+      });
+    }
   };
 
   useEffect(() => {
@@ -56,29 +64,28 @@ const Navigation = () => {
     };
   }, []);
   const contents = [
-    { name: faAddressCard, content: "Introduce me 😄", explain: "About me", link: "/" },
+    { icon: faAddressCard, content: "Introduce me 😄", explain: "About me", name: "aboutme" },
     {
-      name: faLaptop,
+      icon: faLaptop,
       content: "Know about my skill-set 👨‍💼",
       explain: "Skills",
-      link: "/skills",
-      image: "skill_poster.png",
+      name: "skills",
     },
     {
-      name: faImages,
+      icon: faImages,
       content: "Teste my portfolio 🖼️",
       explain: "Portfolio",
-      link: "/portfolio",
-      image: "port_poster.jpg",
+      name: "portfolio",
     },
-    { name: faBlog, content: "Come to my blog ✏️", explain: "My Blog", link: "/blog" },
+    { icon: faBlog, content: "Come to my blog ✏️", explain: "My Blog", name: "blog" },
     {
-      name: faEnvelope,
+      icon: faEnvelope,
       content: "Are you interested in me? 📭",
       explain: "Contact",
-      link: "/contact",
+      name: "contact",
     },
   ];
+
   return (
     <>
       <Row className={FixedNavbar ? "nav_sticky" : "nav_header"}>
@@ -86,22 +93,22 @@ const Navigation = () => {
           <Popover key={i} placement={FixedNavbar ? "bottomRight" : "topLeft"} content={v.content}>
             <Col
               data-value={i}
-              span={i === Selected ? 8 : 4}
+              span={i === pageNumber ? 8 : 4}
               onClick={() => onClickHandler(i)}
               style={{ transition: "0.3s" }}
             >
               <NavLink
                 style={
-                  i === Selected
+                  i === pageNumber
                     ? {
                         borderBottom: `1px solid ${SUB_COLOR}`,
                       }
                     : null
                 }
-                to={v.link}
+                to={v.name === "aboutme" ? "/" : `/${v.name}`}
               >
-                <FontAwesomeIcon icon={v.name} />
-                {i === Selected && <span style={{ marginLeft: "1rem" }}>{v.explain}</span>}
+                <FontAwesomeIcon icon={v.icon} />
+                {i === pageNumber && <span style={{ marginLeft: "1rem" }}>{v.explain}</span>}
               </NavLink>
             </Col>
           </Popover>
