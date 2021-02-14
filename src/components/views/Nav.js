@@ -35,7 +35,7 @@ const NavLink = styled(Link)`
 const Navigation = () => {
   const dispatch = useDispatch();
   const [FixedNavbar, setFixedNavbar] = useState(false);
-  const { pageNumber } = useSelector((state) => state.reducer);
+  const { pageNumber } = useSelector((state) => state);
 
   const onClickHandler = (i) => {
     dispatch({
