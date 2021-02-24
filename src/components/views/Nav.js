@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { SUB_COLOR } from "../config";
 import Col from "antd/lib/col";
-import Popover from "antd/lib/popover";
 import Row from "antd/lib/row";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
@@ -51,13 +50,13 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    const scrollCallBack = window.addEventListener("scroll", () => {
+    function scrollCallBack() {
       if (window.scrollY > 493) {
         setFixedNavbar(true);
       } else {
         setFixedNavbar(false);
       }
-    });
+    }
     window.addEventListener("scroll", scrollCallBack);
     return () => {
       window.removeEventListener("scroll", scrollCallBack);
@@ -90,28 +89,27 @@ const Navigation = () => {
     <>
       <Row className={FixedNavbar ? "nav_sticky" : "nav_header"}>
         {contents.map((v, i) => (
-          <Popover key={i} placement={FixedNavbar ? "bottomRight" : "topLeft"} content={v.content}>
-            <Col
-              data-value={i}
-              span={i === pageNumber ? 8 : 4}
-              onClick={() => onClickHandler(i)}
-              style={{ transition: "0.3s" }}
+          <Col
+            key={i}
+            data-value={i}
+            span={i === pageNumber ? 8 : 4}
+            onClick={() => onClickHandler(i)}
+            style={{ transition: "0.3s" }}
+          >
+            <NavLink
+              style={
+                i === pageNumber
+                  ? {
+                      borderBottom: `1px solid ${SUB_COLOR}`,
+                    }
+                  : null
+              }
+              to={v.name === "aboutme" ? "/" : `/${v.name}`}
             >
-              <NavLink
-                style={
-                  i === pageNumber
-                    ? {
-                        borderBottom: `1px solid ${SUB_COLOR}`,
-                      }
-                    : null
-                }
-                to={v.name === "aboutme" ? "/" : `/${v.name}`}
-              >
-                <FontAwesomeIcon icon={v.icon} />
-                {i === pageNumber && <span style={{ marginLeft: "1rem" }}>{v.explain}</span>}
-              </NavLink>
-            </Col>
-          </Popover>
+              <FontAwesomeIcon icon={v.icon} />
+              {i === pageNumber && <span style={{ marginLeft: "1rem" }}>{v.explain}</span>}
+            </NavLink>
+          </Col>
         ))}
       </Row>
     </>
