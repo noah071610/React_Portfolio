@@ -43,7 +43,7 @@ export const navContents = [
     explain: "Portfolio",
     name: "portfolio",
   },
-  { icon: faBlog, intro: "invite you my blog ✏️", explain: "My Blog", name: "blog" },
+  { icon: faBlog, intro: "Invite you my blog ✏️", explain: "My Blog", name: "blog" },
   {
     icon: faEnvelope,
     intro: "Are you interested in me? 📭",
