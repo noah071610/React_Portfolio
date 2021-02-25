@@ -16,12 +16,66 @@ export const GRAY_COLOR = "rgba(0, 0, 0, 0.2)";
 export const BG_COLOR = "rgb(247, 247, 247)";
 
 // Mainpage Desc
+
 export const CARD_DESC_PS =
   "새로운 기술을 배우기전 항상 자신의 기본기를 점검합니다. 또한 문제를 정확하게 인식하고 배우고 기록합니다.";
 export const CARD_DESC_COMU =
   "팀워크를 최우선으로 여기며 소통을 중심으로 매순간 신뢰의 기반을 다집니다.";
 export const CARD_DESC_COOP =
   "코딩 자체를 즐기며 매순간 열정을 가지고 고비를 넘으며 담담하게 도전합니다.";
+
+export const CardContents = [
+  {
+    squareTitle: "ProblemSolve",
+    title: "문제해결능력을 위한 기본기",
+    desc: CARD_DESC_PS,
+    src: "/images/ProblemSolve.png",
+  },
+  {
+    squareTitle: "Cooperation",
+    title: "신뢰에서 오는 진정한 소통",
+    desc: CARD_DESC_COMU,
+    src: "/images/Cooperation.png",
+  },
+  {
+    squareTitle: "Passion",
+    title: "열정 그리고 도전",
+    desc: CARD_DESC_COOP,
+    src: "/images/Passion.png",
+  },
+];
+export const dataSource = [
+  {
+    key: "1",
+    date: "1994/7/16",
+    summary: "Born in Seoul , South Korea",
+  },
+  {
+    key: "2",
+    date: "2013/3/2",
+    summary: "Entered Induk University Entertainment major ",
+  },
+  {
+    key: "3",
+    date: "2013/11/5",
+    summary: "Enlisted 17th infantry division for Military duty, South Korea",
+  },
+  {
+    key: "4",
+    date: "2016/7/1",
+    summary: "Worked at K-Hotel as a Receptionist , Seoul South Korea",
+  },
+  {
+    key: "5",
+    date: "2017/4/1",
+    summary: "Worked at Sky Ticket as a Merchandiser(MD) , Tokyo Japan",
+  },
+  {
+    key: "6",
+    date: "2018/11/1",
+    summary: "Worked at K-Hotel as a General Manager(GM) , Seoul South Korea",
+  },
+];
 
 // Nav Contents
 export const navContents = [
