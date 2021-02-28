@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
 // Color
+
 export const MAIN_COLOR = "#D5F7E6";
 export const SUB_COLOR = "#5AE4A8";
 export const GRAY_COLOR = "rgba(0, 0, 0, 0.2)";
