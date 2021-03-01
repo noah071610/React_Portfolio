@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Rubik", sans-serif;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body,
+html {
+  line-height: 1;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  background-color: khaki;
+  -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+}
+
+.nav_header {
+  width: 93%;
+  top: -100%;
+  height: 3.125rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn_title {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.marker {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #d5f7e6), color-stop(30%, transparent));
+  background: linear-gradient(to top, #d5f7e6 5%, transparent 30%);
+}
+
+.ant-table th {
+  background-color: #d5f7e6 !important;
+}
+
+.focus {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.focus:hover {
+  color: #5ae4a8;
+}
+
+.quill {
+  height: 400px;
+}
+
+.quill,
+.ql-toolbar {
+  background-color: white;
+}
+
+.tag {
+  color: black;
+  font-size: 0.7rem;
+  background-color: #d5f7e6;
+  padding: 2px 0.4rem;
+  margin: 0.4rem 0.4rem 0 0;
+  border-radius: 10% / 50%;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.tag:hover {
+  background-color: #5ae4a8;
+  color: white;
+}
+
+.slider-left {
+  position: absolute;
+  left: -30% !important;
+  width: 50% !important;
+}
+
+.slider-left div {
+  display: none;
+}
+
+.slider-right {
+  position: absolute !important;
+  left: 80% !important;
+  width: 50% !important;
+}
+
+.slider-right div {
+  display: none;
+}
+
+.react-3d-carousel {
+  height: 350px !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .react-3d-carousel {
+    height: 300px !important;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .react-3d-carousel {
+    height: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .react-3d-carousel {
+    height: 150px !important;
+  }
+}
+
+.contact_image {
+  display: block;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .contact_image {
+    display: none;
+  }
+}
+
+.contact_image_box {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .contact_image_box {
+    text-align: start;
+  }
+}
+
+.div_space {
+  height: 3rem;
+}
+/*# sourceMappingURL=style.css.map */

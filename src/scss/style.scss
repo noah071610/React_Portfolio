@@ -1,0 +1,266 @@
+// preset
+
+$MAIN_COLOR: #d5f7e6;
+$SUB_COLOR: #5ae4a8;
+$GRAY_COLOR: rgba(0, 0, 0, 0.2);
+$BG_COLOR: rgb(247, 247, 247);
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+
+// global
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Rubik", sans-serif;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body,
+html {
+  line-height: 1;
+}
+html {
+  overflow-x: hidden;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+li {
+  display: inline-block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: black;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+// main
+.box {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  background-color: khaki;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+}
+
+.nav_header {
+  width: 93%;
+  top: -100%;
+  height: 3.125rem;
+  transition: 0.5s;
+}
+
+.btn_title {
+  transition: all 0.3s;
+}
+.marker {
+  background: linear-gradient(to top, $MAIN_COLOR 5%, transparent 30%);
+}
+
+.ant-table th {
+  background-color: #d5f7e6 !important;
+}
+
+.focus {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: $SUB_COLOR;
+  }
+}
+
+.quill {
+  height: 400px;
+}
+.quill,
+.ql-toolbar {
+  background-color: white;
+}
+
+.tag {
+  color: black;
+  font-size: 0.7rem;
+  background-color: $MAIN_COLOR;
+  padding: 2px 0.4rem;
+  margin: 0.4rem 0.4rem 0 0;
+  border-radius: 10% / 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $SUB_COLOR;
+    color: white;
+  }
+}
+
+.slider-left {
+  position: absolute;
+  left: -30% !important;
+  width: 50% !important;
+  div {
+    display: none;
+  }
+}
+
+.slider-right {
+  position: absolute !important;
+  left: 80% !important;
+  width: 50% !important;
+  div {
+    display: none;
+  }
+}
+
+.react-3d-carousel {
+  height: 350px !important;
+  @media only screen and (max-width: 992px) {
+    height: 300px !important;
+  }
+  @media only screen and (max-width: 620px) {
+    height: 200px !important;
+  }
+  @media only screen and (max-width: 420px) {
+    height: 150px !important;
+  }
+}
+
+.contact_image {
+  display: block;
+  max-width: 100%;
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+  &_box {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    @media only screen and (max-width: 992px) {
+      text-align: start;
+    }
+  }
+}
+
+.div_space {
+  height: 3rem;
+}
