@@ -18,7 +18,7 @@ const PaginateBtn = styled(Link)`
   .btn_title {
     padding: 0 1.5rem;
   }
-  @media only screen and (max-width: 991px) {
+  @media only screen and (max-width: 992px) {
     display: block;
     height: 100%;
     .btn_title {

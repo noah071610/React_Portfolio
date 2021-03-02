@@ -1,4 +1,4 @@
-import { EditFilled, HeartOutlined } from "@ant-design/icons";
+import { EditFilled } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
@@ -7,15 +7,6 @@ import styled from "styled-components";
 import { REMOVE_POST_REQUEST, REMOVE_POST_ROLLBACK } from "../../../../_reducers";
 import { useHistory } from "react-router";
 import { message } from "antd";
-
-const Heart = styled(HeartOutlined)`
-  font-size: 1.3rem;
-  cursor: pointer;
-  &:hover {
-    color: red;
-    opacity: 0.5;
-  }
-`;
 
 const EditIcon = styled(EditFilled)`
   font-size: 1.3rem;
@@ -39,7 +30,6 @@ function BlogPostNavigation() {
   const dispatch = useDispatch();
   const history = useHistory();
   const { post, user, removePostDone } = useSelector((state) => state);
-  const onClickLike = () => {};
 
   const onClickRemove = () => {
     const confirm = window.confirm("정말 삭제하시겠어요?");
@@ -90,15 +80,12 @@ function BlogPostNavigation() {
   };
 
   return (
-    <ul>
+    <ul style={{ display: "flex" }}>
       <li style={{ marginRight: "0.8rem" }}>
         <EditIcon onClick={onClickEdit} />
       </li>
       <li style={{ marginRight: "0.8rem" }}>
         <TrashIcon onClick={onClickRemove} icon={faTrashAlt} />
-      </li>
-      <li style={{ marginRight: "0.8rem" }}>
-        <Heart onClick={onClickLike} /> 0
       </li>
     </ul>
   );

@@ -20,6 +20,9 @@ const List = styled.li`
   &:hover {
     opacity: 0.5;
   }
+  @media only screen and (max-width: 420px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const Thumbnail = styled.img`
@@ -37,6 +40,15 @@ const PostContainer = styled.div`
   padding: 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
+`;
+
+const PostTitle = styled.h2`
+  margin: 0;
+  width: 100%;
+  font-size: 2.5rem;
+  @media only screen and (max-width: 420px) {
+    font-size: 1.4rem;
+  }
 `;
 
 function BlogPost({ match }) {
@@ -72,35 +84,45 @@ function BlogPost({ match }) {
       <PostContainer>
         {post && (
           <>
-            <h2 style={{ margin: 0, width: "100%", fontSize: "2.5rem" }}>{post && post.title}</h2>
+            <PostTitle>{post && post.title}</PostTitle>
             <div
               className="divider"
-              style={{ margin: "1rem 0 1.5rem 0", width: "80%", height: "1px" }}
+              style={{ margin: "1rem 0 1.5rem 0", width: "100%", height: "1px" }}
             />
-            <ul style={{ display: "flex", alignItems: "center", marginBottom: 0 }}>
-              <List>
-                <a onClick={() => history.push("/blog")}>블로그홈</a>
-              </List>
-              <FontAwesomeIcon
-                icon={faCircle}
-                style={{ fontSize: "0.3rem", margin: "0 0.3rem", color: GRAY_COLOR }}
-              />
-              <List>
-                <a>
-                  {post.User.name}`s{post.id} post
-                </a>
-              </List>
-              <FontAwesomeIcon
-                icon={faCircle}
-                style={{ fontSize: "0.3rem", margin: "0 0.3rem", color: GRAY_COLOR }}
-              />
-              <List>
-                <span className="date">
-                  {dayjs().to(dayjs(post.createdAt), true)}
-                  &nbsp;ago
-                </span>
-              </List>
-            </ul>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginBottom: 0,
+              }}
+            >
+              <ul>
+                <List>
+                  <a onClick={() => history.push("/blog")}>블로그홈</a>
+                </List>
+                <FontAwesomeIcon
+                  icon={faCircle}
+                  style={{ fontSize: "0.3rem", margin: "0 0.3rem", color: GRAY_COLOR }}
+                />
+                <List>
+                  <a>
+                    {post.User.name}`s{post.id} post
+                  </a>
+                </List>
+                <FontAwesomeIcon
+                  icon={faCircle}
+                  style={{ fontSize: "0.3rem", margin: "0 0.3rem", color: GRAY_COLOR }}
+                />
+                <List>
+                  <span className="date">
+                    {dayjs().to(dayjs(post.createdAt), true)}
+                    &nbsp;ago
+                  </span>
+                </List>
+              </ul>
+              <BlogPostNavigation />
+            </div>
             <ul style={{ marginBottom: "0" }}>
               {post.Hashtags.map((v, i) => {
                 return (
@@ -125,17 +147,6 @@ function BlogPost({ match }) {
           />
         )}
         <div className="divider" style={{ marginTop: "4rem", width: "100%", height: "1px" }} />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "1.5rem 0",
-          }}
-        >
-          <h3 style={{ margin: 0 }}>이글이 도움이 되었나요?</h3>
-          <BlogPostNavigation />
-        </div>
         <BlogPostPageArrow />
       </PostContainer>
     </PageWrapper>
