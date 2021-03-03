@@ -208,7 +208,7 @@ h2 {
   font-size: 0.7rem;
   background-color: #d5f7e6;
   padding: 2px 0.4rem;
-  margin: 0.4rem 0.4rem 0 0;
+  margin: 0.4rem 0 0 0.4rem;
   border-radius: 10% / 50%;
   display: inline-block;
   cursor: pointer;
@@ -224,7 +224,7 @@ h2 {
 .slider-left {
   position: absolute;
   left: -30% !important;
-  width: 50% !important;
+  width: 30% !important;
 }
 
 .slider-left div {
@@ -233,8 +233,8 @@ h2 {
 
 .slider-right {
   position: absolute !important;
-  left: 80% !important;
-  width: 50% !important;
+  left: 100% !important;
+  width: 30% !important;
 }
 
 .slider-right div {
@@ -289,5 +289,18 @@ h2 {
 
 .div_space {
   height: 3rem;
+}
+
+.is-current {
+  border-left: 5px solid #5ae4a8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 992px) {
+  .is-current {
+    border-left: none;
+    border-bottom: 3px solid #5ae4a8;
+  }
 }
 /*# sourceMappingURL=style.css.map */

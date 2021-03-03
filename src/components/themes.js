@@ -32,13 +32,12 @@ body{
   .articles{
     background-color: ${(props) => props.theme.pageColor};
   }
-  h1,h2,h3,.writer_name, .skill_box_title, span , a , .edit_form, .date{
+  h1,h2,h3, .social_icon, .writer_name, .skill_box_title, span , a , .edit_form, .date{
     color:${(props) => props.theme.fontColor};
   }
   .divider{
     background-color:${(props) => props.theme.diverColor};
   }
-
   .nav_sticky {
     width: 100%;
     height: 3.125rem;
@@ -100,7 +99,9 @@ h2{
   font-size:1.1rem;
 }
 
-
+.ant-table-pagination{
+  display:none !important;
+}
 
 .ant-input {
   background-color: ${(props) => props.theme.pageColor} !important;

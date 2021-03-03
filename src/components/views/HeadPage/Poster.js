@@ -23,14 +23,6 @@ const rotatingLeft = keyframes`
  }
 `;
 
-const Heart = styled.img`
-  position: absolute;
-  width: 7%;
-  bottom: 55%;
-  right: 29%;
-  animation: ${turning} 2s infinite;
-`;
-
 const PosterWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -132,15 +124,9 @@ const Poster = () => {
   return (
     <PosterWrapper>
       <PosterImg>
-        <img style={{ width: "80%" }} src={`/images/poster/${posterName}.png`} alt={posterName} />
-        {posterName === "Mainpage" ? (
-          <Heart src="/images/poster/aboutme_decoration.png" />
-        ) : posterName === "skills" ? (
-          <>
-            <Gear src="images/poster/skills_decoration.png" />
-            <GearRight src="images/poster/skills_decoration.png" />
-          </>
-        ) : null}
+        <img style={{ width: "80%" }} src={`/images/poster/skills.png`} alt={posterName} />
+        <Gear src="images/poster/skills_decoration.png" />
+        <GearRight src="images/poster/skills_decoration.png" />
       </PosterImg>
       <Title>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>

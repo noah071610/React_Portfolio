@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { SUB_COLOR } from "../../config";
-import Col from "antd/lib/col";
-import Row from "antd/lib/row";
 import "antd/dist/antd.css";
 import { navContents } from "../../config";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { PAGE_CHANGE } from "../../../_reducers";
+import Scrollspy from "react-scrollspy";
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   display: flex;
   height: 100%;
   justify-content: center;
@@ -30,7 +28,6 @@ const NavLink = styled(Link)`
 const Navigation = ({ mobileSize }) => {
   const dispatch = useDispatch();
   const [FixedNavbar, setFixedNavbar] = useState(false);
-  const { pageNumber } = useSelector((state) => state);
 
   const onClickHandler = (i) => {
     dispatch({
@@ -69,54 +66,41 @@ const Navigation = ({ mobileSize }) => {
 
   const navRow = (navContents) => {
     return navContents.map((v, i) => (
-      <Col
+      <li
         key={i}
-        span={i === pageNumber ? 8 : 4}
         onClick={() => onClickHandler(i)}
-        style={{ transition: "0.3s" }}
+        style={{ transition: "all 0.3s", width: "100%" }}
       >
-        <NavLink
-          style={
-            i === pageNumber
-              ? {
-                  borderBottom: `1px solid ${SUB_COLOR}`,
-                }
-              : null
-          }
-          to={v.name === "Mainpage" ? "/" : `/${v.name}`}
-        >
-          <FontAwesomeIcon icon={v.icon} />
-          {i === pageNumber && <span style={{ marginLeft: "1rem" }}>{v.explain}</span>}
-        </NavLink>
-      </Col>
-    ));
-  };
-
-  const navCoulmn = (navContents) => {
-    return navContents.map((v, i) => (
-      <Col key={i} span={24} onClick={() => onClickHandler(i)} style={{ transition: "0.3s" }}>
-        <NavLink
-          style={
-            i === pageNumber
-              ? {
-                  borderLeft: `5px solid ${SUB_COLOR}`,
-                }
-              : null
-          }
-          to={v.name === "Mainpage" ? "/" : `/${v.name}`}
-        >
+        <NavLink href={`#section-${i + 1}`}>
           <FontAwesomeIcon icon={v.icon} />
           <span style={{ marginLeft: "1rem" }}>{v.explain}</span>
         </NavLink>
-      </Col>
+      </li>
+    ));
+  };
+  const navCoulmn = (navContents) => {
+    return navContents.map((v, i) => (
+      <li
+        key={i}
+        onClick={() => onClickHandler(i)}
+        style={{ transition: "all 0.3s", width: "100%" }}
+      >
+        <NavLink href={`#section-${i + 1}`}>
+          <FontAwesomeIcon icon={v.icon} />
+          <span style={{ marginLeft: "1rem" }}>{v.explain}</span>
+        </NavLink>
+      </li>
     ));
   };
   return (
-    <>
-      <Row className={mobileSize ? (FixedNavbar ? "nav_sticky" : "nav_header") : null}>
-        {mobileSize ? navRow(navContents) : navCoulmn(navContents)}
-      </Row>
-    </>
+    <Scrollspy
+      items={["section-1", "section-2", "section-3", "section-4"]}
+      currentClassName="is-current"
+      style={mobileSize ? { display: "flex" } : null}
+      className={mobileSize ? (FixedNavbar ? "nav_sticky" : "nav_header") : null}
+    >
+      {mobileSize ? navRow(navContents) : navCoulmn(navContents)}
+    </Scrollspy>
   );
 };
 

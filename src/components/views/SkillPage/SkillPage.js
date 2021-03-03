@@ -2,16 +2,12 @@ import Row from "antd/lib/row";
 import React from "react";
 import Articles from "../_common/Articles";
 import PageWrapper from "../_common/PageWrapper";
-import SkillBox from "./Section/SkillBox";
-import SkillImg from "./Section/SkillImg";
+import SkillBox from "../MainPage/SkillSection/SkillBox";
 import { skills, languages } from "../../config";
 
 const SkillPage = () => {
   return (
     <PageWrapper>
-      <Articles title="Skills" sub="없어선 안될 실력있는 프론트엔드 개발자를 지향합니다.">
-        <SkillImg />
-      </Articles>
       <Articles title="Skill Lists">
         <Row>
           {skills.map((skill, i) => (

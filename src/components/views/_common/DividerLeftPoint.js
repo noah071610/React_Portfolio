@@ -5,6 +5,7 @@ import { MAIN_COLOR } from "../../config";
 const Div = styled.div`
   position: relative;
   width: 100%;
+  margin: 0 auto;
   height: 1px;
   &:before {
     position: absolute;

@@ -98,7 +98,6 @@ export const navContents = [
     explain: "Portfolio",
     name: "portfolio",
   },
-  { icon: faBlog, intro: "Invite you my blog ✏️", explain: "My Blog", name: "blog" },
   {
     icon: faEnvelope,
     intro: "Are you interested in me? 📭",
@@ -124,8 +123,7 @@ export const skills = [
   {
     name: "CSS",
     src: "https://img.icons8.com/color/144/000000/css3.png",
-    desc:
-      "폭넓은 애니메이션과 SCSS와 같은 전처리기 사용이 가능하며 브라우저 렌딩 특성을 파악해 최적화를 보장합니다.",
+    desc: "SCSS와 같은 전처리기 사용이 가능하며 브라우저 렌딩 특성을 파악해 최적화를 보장합니다.",
     level: true,
   },
   {
