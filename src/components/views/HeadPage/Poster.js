@@ -19,7 +19,7 @@ const rotatingRight = keyframes`
 
 const rotatingLeft = keyframes`
  to {
-   transform: rotateZ(-360deg);
+   transform: rotateZ(-180deg);
  }
 `;
 
