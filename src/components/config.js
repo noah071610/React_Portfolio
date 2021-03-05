@@ -1,10 +1,4 @@
-import {
-  faAddressCard,
-  faBlog,
-  faEnvelope,
-  faImages,
-  faLaptop,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faEnvelope, faImages, faLaptop } from "@fortawesome/free-solid-svg-icons";
 import Popover from "antd/lib/popover";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";

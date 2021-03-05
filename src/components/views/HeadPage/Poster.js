@@ -5,12 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { MODE_CHANGE } from "../../../_reducers";
 
-const turning = keyframes`
-to {
-  transform: rotateY(360deg);
-}
-`;
-
 const rotatingRight = keyframes`
  to {
    transform: rotateZ(360deg);
@@ -19,7 +13,7 @@ const rotatingRight = keyframes`
 
 const rotatingLeft = keyframes`
  to {
-   transform: rotateZ(-180deg);
+   transform: rotateZ(-360deg);
  }
 `;
 

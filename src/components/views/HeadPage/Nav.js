@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { SUB_COLOR } from "../../config";
 import "antd/dist/antd.css";
 import { navContents } from "../../config";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { PAGE_CHANGE } from "../../../_reducers";
 import Scrollspy from "react-scrollspy";
 
