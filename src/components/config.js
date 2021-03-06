@@ -76,9 +76,9 @@ export const dataSource = [
 export const navContents = [
   {
     icon: faAddressCard,
-    intro: "Hi! I'm a Web-developer 💻",
+    intro: "",
     explain: "About me",
-    name: "Mainpage",
+    name: "aboutme",
   },
   {
     icon: faLaptop,

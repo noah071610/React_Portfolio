@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 
 const Div = styled.div`
   position: relative;
-  width: 93%;
+  width: 95%;
   border-radius: 5px;
   margin-bottom: 1.5rem;
   text-align: center;

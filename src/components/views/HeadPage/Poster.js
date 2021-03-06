@@ -100,7 +100,6 @@ const NightModeIcon = styled(FontAwesomeIcon)`
 `;
 
 const Poster = () => {
-  const { posterName, postIntro } = useSelector((state) => state);
   const { theme } = useSelector((state) => state);
   const dispatch = useDispatch();
   const onClickLightMode = () => {
@@ -118,7 +117,7 @@ const Poster = () => {
   return (
     <PosterWrapper>
       <PosterImg>
-        <img style={{ width: "80%" }} src={`/images/poster/skills.png`} alt={posterName} />
+        <img style={{ width: "80%" }} src={`/images/poster/skills.png`} alt="poster" />
         <Gear src="images/poster/skills_decoration.png" />
         <GearRight src="images/poster/skills_decoration.png" />
       </PosterImg>
@@ -131,7 +130,7 @@ const Poster = () => {
             <LightModeIcon onClick={onClickLightMode} icon={faSun} />
           )}
         </div>
-        <p>{postIntro && postIntro}</p>
+        <p>Hi! I'm a Web-developer 💻</p>
       </Title>
     </PosterWrapper>
   );

@@ -259,7 +259,7 @@ h2 {
 
 @media only screen and (max-width: 420px) {
   .react-3d-carousel {
-    height: 150px !important;
+    height: 170px !important;
   }
 }
 
@@ -301,6 +301,19 @@ h2 {
   .is-current {
     border-left: none;
     border-bottom: 3px solid #5ae4a8;
+    width: 100% !important;
   }
+  .is-current span {
+    display: block;
+    margin-left: 1rem;
+  }
+}
+
+.portfolio_search {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */

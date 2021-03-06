@@ -25,6 +25,15 @@ const NavLink = styled.a`
   }
 `;
 
+const List = styled.li`
+  transition: all 0.3s;
+  width: 30%;
+`;
+
+const ExplainNav = styled.span`
+  display: none;
+`;
+
 const Navigation = ({ mobileSize }) => {
   const dispatch = useDispatch();
   const [FixedNavbar, setFixedNavbar] = useState(false);
@@ -66,16 +75,12 @@ const Navigation = ({ mobileSize }) => {
 
   const navRow = (navContents) => {
     return navContents.map((v, i) => (
-      <li
-        key={i}
-        onClick={() => onClickHandler(i)}
-        style={{ transition: "all 0.3s", width: "100%" }}
-      >
-        <NavLink href={`#section-${i + 1}`}>
+      <List key={i} onClick={() => onClickHandler(i)}>
+        <NavLink href={`#${v.name}`}>
           <FontAwesomeIcon icon={v.icon} />
-          <span style={{ marginLeft: "1rem" }}>{v.explain}</span>
+          <ExplainNav>{v.explain}</ExplainNav>
         </NavLink>
-      </li>
+      </List>
     ));
   };
   const navCoulmn = (navContents) => {
@@ -85,7 +90,7 @@ const Navigation = ({ mobileSize }) => {
         onClick={() => onClickHandler(i)}
         style={{ transition: "all 0.3s", width: "100%" }}
       >
-        <NavLink href={`#section-${i + 1}`}>
+        <NavLink href={`#${v.name}`}>
           <FontAwesomeIcon icon={v.icon} />
           <span style={{ marginLeft: "1rem" }}>{v.explain}</span>
         </NavLink>
@@ -93,14 +98,24 @@ const Navigation = ({ mobileSize }) => {
     ));
   };
   return (
-    <Scrollspy
-      items={["section-1", "section-2", "section-3", "section-4"]}
-      currentClassName="is-current"
-      style={mobileSize ? { display: "flex" } : null}
-      className={mobileSize ? (FixedNavbar ? "nav_sticky" : "nav_header") : null}
-    >
-      {mobileSize ? navRow(navContents) : navCoulmn(navContents)}
-    </Scrollspy>
+    <>
+      <Scrollspy
+        items={["aboutme", "skills", "portfolio", "contact"]}
+        currentClassName="is-current"
+        className={FixedNavbar ? "nav_sticky" : "nav_header"}
+        offset={-200}
+        style={
+          mobileSize
+            ? {
+                display: "flex",
+                width: "100%",
+              }
+            : null
+        }
+      >
+        {mobileSize ? navRow(navContents) : navCoulmn(navContents)}
+      </Scrollspy>
+    </>
   );
 };
 

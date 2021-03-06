@@ -168,7 +168,6 @@ h2 {
   height: 3.125rem;
   transition: 0.5s;
 }
-
 .btn_title {
   transition: all 0.3s;
 }
@@ -240,7 +239,7 @@ h2 {
     height: 200px !important;
   }
   @media only screen and (max-width: 420px) {
-    height: 150px !important;
+    height: 170px !important;
   }
 }
 
@@ -271,5 +270,18 @@ h2 {
   @media only screen and (max-width: 992px) {
     border-left: none;
     border-bottom: 3px solid $SUB_COLOR;
+    width: 100% !important;
+    span {
+      display: block;
+      margin-left: 1rem;
+    }
   }
+}
+
+.portfolio_search {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
 }

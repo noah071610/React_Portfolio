@@ -1,23 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { Suspense, useEffect, useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import MainPage from "./views/MainPage/MainPage";
 import { SquareBottom, SquareLeft, SquareRight, SquareTop } from "./views/_common/Square";
 import Navigation from "./views/HeadPage/Nav";
 import Poster from "./views/HeadPage/Poster";
-import SkillPage from "./views/SkillPage/SkillPage";
-import PortfolioPage from "./views/PortfolioPage/PortfolioPage";
-import PortfolioDetail from "./views/PortfolioPage/Section/PortfolioDetail";
 import styled, { ThemeProvider } from "styled-components";
-import BlogPage from "./views/BlogPage/BlogPage";
-import BlogHashtagPage from "./views/BlogPage/BlogHashtagPage";
-import ContactPage from "./views/ContactPage/ContactPage";
 import Footer from "./views/FooterPage/Footer";
 import { LOAD_INFO_REQUEST, LOAD_NAV_INFO } from "../_reducers";
-import BlogPost from "./views/BlogPage/Section/BlogPost";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import PostEditForm from "./views/BlogPage/PostEditForm";
 import { darkTheme, lightTheme, GlobalStyles } from "./themes";
 
 const MobileHome = styled.div`
@@ -90,29 +82,6 @@ const App = () => {
     });
   }, [dispatch]);
 
-  const switchComponent = (mobileSize) => {
-    return (
-      <Switch>
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/skills" component={SkillPage} />
-        <Route exact path="/portfolio" component={PortfolioPage} />
-        <Route exact path="/portfolio/:id" component={PortfolioDetail} />
-        <Route exact path="/blog" component={BlogPage} />
-        <Route exact path="/blog/:page" component={BlogPage} />
-        <Route exact path="/blog/edit/:id" component={PostEditForm} />
-        <Route exact path="/blog/post/:id" component={BlogPost} />
-        <Route exact path="/blog/hashtag/:name" component={BlogHashtagPage} />
-        <Route exact path="/contact" render={() => <ContactPage mobileSize={mobileSize} />} />
-      </Switch>
-    );
-  };
-  useEffect(
-    (mobileSize) => {
-      switchComponent(mobileSize);
-    },
-    [mobileSize]
-  );
-
   AOS.init({ offset: 120 });
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -123,10 +92,9 @@ const App = () => {
             <MobileHome>
               <Poster />
               <Navigation mobileSize={mobileSize} />
-              {switchComponent(mobileSize)}
+              <Route exact path="/" render={() => <MainPage mobileSize={mobileSize} />} />
               <SquareLeft />
               <SquareRight />
-              <SquareBottom />
               <Footer />
             </MobileHome>
           ) : (
@@ -139,7 +107,7 @@ const App = () => {
               </AsideMenu>
               <Page>
                 <SquareTop />
-                {switchComponent(mobileSize)}
+                <Route exact path="/" render={() => <MainPage mobileSize={mobileSize} />} />
               </Page>
             </>
           )}
