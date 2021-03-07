@@ -1,13 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import MainPage from "./views/MainPage/MainPage";
 import { SquareBottom, SquareLeft, SquareRight, SquareTop } from "./views/_common/Square";
-import Navigation from "./views/HeadPage/Nav";
-import Poster from "./views/HeadPage/Poster";
+import Navigation from "./views/MainPage/NavigationSection/Navigation";
+import Poster from "./views/MainPage/NavigationSection/Poster";
 import styled, { ThemeProvider } from "styled-components";
-import Footer from "./views/FooterPage/Footer";
-import { LOAD_INFO_REQUEST, LOAD_NAV_INFO } from "../_reducers";
+import Footer from "./views/MainPage/FooterSection/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { darkTheme, lightTheme, GlobalStyles } from "./themes";
@@ -42,23 +41,8 @@ const Page = styled.div`
 `;
 
 const App = () => {
-  const dispatch = useDispatch();
   const [mobileSize, setmobileSize] = useState(null);
-  const { postIntro, pageNumber, posterName, theme } = useSelector((state) => state);
-
-  useEffect(() => {
-    if (localStorage.navInfo) {
-      dispatch({
-        type: LOAD_NAV_INFO,
-        data: JSON.parse(localStorage.navInfo),
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    localStorage.navInfo = JSON.stringify({ postIntro, pageNumber, posterName });
-  }, [pageNumber, postIntro, posterName]);
+  const { theme } = useSelector((state) => state);
 
   useEffect(() => {
     function mediaQuery() {
@@ -75,12 +59,6 @@ const App = () => {
       window.removeEventListener("DOMContentLoaded", mediaQuery);
     };
   }, []);
-
-  useEffect(() => {
-    dispatch({
-      type: LOAD_INFO_REQUEST,
-    });
-  }, [dispatch]);
 
   AOS.init({ offset: 120 });
   return (

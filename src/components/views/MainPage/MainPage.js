@@ -13,7 +13,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import SkillSection from "./SkillSection/SkillSection";
 import PortfolioSection from "./PortfolioSection/PortfolioSection";
 import ContactSection from "./ContactSection/ContactSection";
-import Footer from "../FooterPage/Footer";
+import Footer from "./FooterSection/Footer";
 
 const Img = styled.img`
   width: 170px;
