@@ -285,4 +285,22 @@ h2 {
   position: absolute;
   right: 0.5rem;
   bottom: 0.5rem;
+  @media only screen and (max-width: 420px) {
+    display: none;
+  }
+}
+
+.mobile_port_title {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.portfolio_summary {
+  text-align: start;
+  padding: 0 0 7rem 1rem;
+  line-height: 2;
+  @media only screen and (max-width: 420px) {
+    font-size: 0.7rem;
+  }
 }

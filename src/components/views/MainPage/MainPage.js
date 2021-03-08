@@ -14,6 +14,9 @@ import SkillSection from "./SkillSection/SkillSection";
 import PortfolioSection from "./PortfolioSection/PortfolioSection";
 import ContactSection from "./ContactSection/ContactSection";
 import Footer from "./FooterSection/Footer";
+import Poster from "./NavigationSection/Poster";
+import Navigation from "./NavigationSection/Navigation";
+import { SquareBottom, SquareLeft, SquareRight, SquareTop } from "../_common/Square";
 
 const Img = styled.img`
   width: 170px;
@@ -78,86 +81,146 @@ const ValueCard = styled(Col)`
   margin-bottom: 1.5rem;
 `;
 
+const AsideMenu = styled.div`
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+`;
+
+const Main = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const MobileHome = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+`;
+
 const MainPage = ({ mobileSize }) => {
+  const pageComponent = () => {
+    return (
+      <PageWrapper>
+        <section id="aboutme">
+          <Articles>
+            <Title title="Introduce" sub="신뢰를 바탕으로 함께 발전합니다." />
+            <Row>
+              <IntroImg span={12}>
+                <Img data-aos="fade-down" data-aos-duration="800" src="./images/profile.jpg" />
+              </IntroImg>
+              <IntroMe data-aos="fade-down" data-aos-duration="800" data-aos-delay="100" span={12}>
+                <h3>
+                  신뢰를 주는 <span className="marker">장현수</span> 입니다.
+                </h3>
+                <p>
+                  성급하지 않지만 꾸준히, 누구보다 즐겁고 열정있게 신입 프론트엔드 개발자라는
+                  목표를향해 나아가고 있습니다.
+                </p>
+                <ul>
+                  <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">
+                    <a href="https://github.com/noah071610" target="_blank" rel="noreferrer">
+                      <SocialIcon className="social_icon" icon={faGithub} />
+                    </a>
+                  </li>
+                  <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
+                    <a
+                      href="https://www.instagram.com/salmonchobab/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <SocialIcon className="social_icon" icon={faInstagram} />
+                    </a>
+                  </li>
+                  <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="500">
+                    <a href="mailto:noah071610@naver.com">
+                      <SocialIcon className="social_icon" icon={faEnvelope} />
+                    </a>
+                  </li>
+                </ul>
+              </IntroMe>
+            </Row>
+          </Articles>
+          <Articles>
+            <Title title="Main Value" sub="저의 핵심가치는 기본 신뢰 열정 입니다." />
+            <Row>
+              <ValueCard
+                data-aos="flip-up"
+                data-aos-duration="500"
+                data-aos-delay="400"
+                xs={24}
+                md={8}
+              >
+                <CardContent contents={CardContents[0]} />
+              </ValueCard>
+              <ValueCard
+                data-aos="flip-up"
+                data-aos-duration="500"
+                data-aos-delay="600"
+                xs={24}
+                md={8}
+              >
+                <CardContent contents={CardContents[1]} />
+              </ValueCard>
+              <ValueCard
+                data-aos="flip-up"
+                data-aos-duration="500"
+                data-aos-delay="700"
+                xs={24}
+                md={8}
+              >
+                <CardContent contents={CardContents[2]} />
+              </ValueCard>
+            </Row>
+          </Articles>
+        </section>
+        <SkillSection id="skills" />
+        <PortfolioSection id="portfolio" />
+        <ContactSection id="contact" />
+        {mobileSize ? null : <Footer />}
+      </PageWrapper>
+    );
+  };
   return (
-    <PageWrapper>
-      <section id="aboutme">
-        <Articles>
-          <Title title="Introduce" sub="신뢰를 바탕으로 함께 발전합니다." />
-          <Row>
-            <IntroImg span={12}>
-              <Img data-aos="fade-down" data-aos-duration="800" src="./images/profile.jpg" />
-            </IntroImg>
-            <IntroMe data-aos="fade-down" data-aos-duration="800" data-aos-delay="100" span={12}>
-              <h3>
-                신뢰를 주는 <span className="marker">장현수</span> 입니다.
-              </h3>
-              <p>
-                성급하지 않지만 꾸준히, 누구보다 즐겁고 열정있게 신입 프론트엔드 개발자라는
-                목표를향해 나아가고 있습니다.
-              </p>
-              <ul>
-                <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">
-                  <a href="https://github.com/noah071610" target="_blank" rel="noreferrer">
-                    <SocialIcon className="social_icon" icon={faGithub} />
-                  </a>
-                </li>
-                <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
-                  <a
-                    href="https://www.instagram.com/salmonchobab/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <SocialIcon className="social_icon" icon={faInstagram} />
-                  </a>
-                </li>
-                <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="500">
-                  <a href="mailto:noah071610@naver.com">
-                    <SocialIcon className="social_icon" icon={faEnvelope} />
-                  </a>
-                </li>
-              </ul>
-            </IntroMe>
-          </Row>
-        </Articles>
-        <Articles>
-          <Title title="Main Value" sub="저의 핵심가치는 기본 신뢰 열정 입니다." />
-          <Row>
-            <ValueCard
-              data-aos="flip-up"
-              data-aos-duration="500"
-              data-aos-delay="400"
-              xs={24}
-              md={8}
-            >
-              <CardContent contents={CardContents[0]} />
-            </ValueCard>
-            <ValueCard
-              data-aos="flip-up"
-              data-aos-duration="500"
-              data-aos-delay="600"
-              xs={24}
-              md={8}
-            >
-              <CardContent contents={CardContents[1]} />
-            </ValueCard>
-            <ValueCard
-              data-aos="flip-up"
-              data-aos-duration="500"
-              data-aos-delay="700"
-              xs={24}
-              md={8}
-            >
-              <CardContent contents={CardContents[2]} />
-            </ValueCard>
-          </Row>
-        </Articles>
-      </section>
-      <SkillSection id="skills" />
-      <PortfolioSection id="portfolio" />
-      <ContactSection id="contact" />
-      {mobileSize ? null : <Footer />}
-    </PageWrapper>
+    <>
+      {mobileSize ? (
+        <>
+          <MobileHome>
+            <Poster />
+            <Navigation mobileSize={mobileSize} />
+            <SquareLeft />
+            <SquareRight />
+            {pageComponent()}
+            <Footer />
+          </MobileHome>
+        </>
+      ) : (
+        <>
+          <AsideMenu>
+            <Poster />
+            <Navigation />
+            <SquareBottom />
+          </AsideMenu>
+          <Main>
+            <SquareTop />
+            {pageComponent()}
+          </Main>
+        </>
+      )}
+    </>
   );
 };
 

@@ -311,9 +311,33 @@ h2 {
 
 .portfolio_search {
   font-size: 1.7rem;
+  -webkit-transition: all 0.3;
+  transition: all 0.3;
   color: rgba(0, 0, 0, 0.2);
   position: absolute;
   right: 0.5rem;
   bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 420px) {
+  .portfolio_search {
+    display: none;
+  }
+}
+
+.mobile_port_title:hover {
+  text-decoration: underline;
+}
+
+.portfolio_summary {
+  text-align: start;
+  padding: 0 0 7rem 1rem;
+  line-height: 2;
+}
+
+@media only screen and (max-width: 420px) {
+  .portfolio_summary {
+    font-size: 0.7rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
