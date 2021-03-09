@@ -3,7 +3,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import MainPage from "./views/MainPage/MainPage";
 import { ThemeProvider } from "styled-components";
-import Portfolio1 from "./views/MainPage/PortfolioSection/Portfolio1";
+import PortfolioPage from "./views/MainPage/PortfolioSection/PortfolioPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { darkTheme, lightTheme, GlobalStyles } from "./themes";
@@ -38,7 +38,7 @@ const App = () => {
           <Route
             exact
             path="/portfolio/:id"
-            render={() => <Portfolio1 mobileSize={mobileSize} />}
+            render={() => <PortfolioPage mobileSize={mobileSize} />}
           />
         </BrowserRouter>
       </Suspense>

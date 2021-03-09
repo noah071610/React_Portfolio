@@ -211,3 +211,50 @@ export const languages = [
     level: "high",
   },
 ];
+
+//Portfolio
+
+export const portfolio1 = {
+  id: 1,
+  name: "반응형 웹 포트폴리오 사이트",
+  date: "2021/2~ 2021/3",
+  tags: ["#Html", "#CSS", "#Javascript", "#React"],
+  desc: `#반응형으로 모바일과 PC 둘 다 사용이 가능합니다.
+  <br />#<span class="marker">간결하고 직관적인</span> 페이지로 가독성을 높였습니다.
+  <br />
+  #필요없는 기능은 과감하게 제거했으며 최적화를 보장합니다.
+  <br />
+  #야간모드 및 다양한 라이브러리를 이해하고 적용했습니다.`,
+  src: "/images/portfolio/portfolio1_main.png",
+  git: "https://github.com/noah071610",
+};
+
+export const portfolio2 = {
+  id: 2,
+  name: "반응형 웹 포트폴리오 사이트dd",
+  date: "2021/2~ 2021/3zz",
+  tags: ["#Html", "dd", "Javascript", "React"],
+  desc: `#반응형으로 모바일과 PC 둘 다 사용이 가능합니다.
+  <br />#<span class="marker">간결하고 직관적인</span> 페이지로 가독성을 높였습니다.
+  <br />
+  #필요없는 기능은 과감하게 제거했으며 dd최적화를 보장합니다.
+  <br />
+  #야간모드 및 다양한 라이브러리를 이해하고 적용했습니다.`,
+  src: "/images/game.jpg",
+  git: "https://github.com/noah071610",
+};
+
+export const portfolio3 = {
+  id: 3,
+  name: "ss",
+  date: "2021/2~ 2021/3zz",
+  tags: ["#Html", "dd", "Javascript", "React"],
+  desc: `#반응형으로 모바일과 PC 둘 다 사용이 가능합니다.
+  <br />#<span class="marker">간결하고 직관적인</span> 페이지로 가독성을 높였습니다.
+  <br />
+  #필요없는 기능은 과감하게 제거했으며 dd최적화를 보장합니다.
+  <br />
+  #야간모드 및 다양한 라이브러리를 이해하고 적용했습니다.`,
+  src: "/images/game.jpg",
+  git: "https://github.com/noah071610",
+};

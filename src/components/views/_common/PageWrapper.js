@@ -6,10 +6,9 @@ const Div = styled.div`
   position: relative;
   width: 95%;
   border-radius: 5px;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   text-align: center;
   box-shadow: 4px 8px 21px 1px rgba(0, 0, 0, 0.15);
-  margin-top: 3rem;
   overflow: hidden;
 `;
 const scrollEffect = keyframes`
@@ -19,9 +18,9 @@ to {
 `;
 const Scroll = styled.div`
   opacity: 0.5;
-  position: absolute;
+  position: fixed;
   bottom: 0.5rem;
-  right: 0.5rem;
+  right: 1rem;
   font-size: 2rem;
   z-index: 10;
   cursor: pointer;

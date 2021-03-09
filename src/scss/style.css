@@ -168,6 +168,7 @@ h2 {
   height: 3.125rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  margin-bottom: 3rem;
 }
 
 .btn_title {
@@ -176,6 +177,7 @@ h2 {
 }
 
 .marker {
+  font-weight: bold;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #d5f7e6), color-stop(30%, transparent));
   background: linear-gradient(to top, #d5f7e6 5%, transparent 30%);
 }
@@ -331,13 +333,34 @@ h2 {
 
 .portfolio_summary {
   text-align: start;
+  font-size: 1rem;
   padding: 0 0 7rem 1rem;
-  line-height: 2;
+  line-height: 2.5;
 }
 
 @media only screen and (max-width: 420px) {
   .portfolio_summary {
     font-size: 0.7rem;
+  }
+}
+
+.portfolio_intro {
+  display: block;
+  text-align: start;
+  margin-top: 3rem;
+  line-height: 2;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .portfolio_intro {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .portfolio_intro {
+    font-size: 0.64rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

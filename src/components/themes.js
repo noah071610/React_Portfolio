@@ -32,7 +32,7 @@ body{
   .articles{
     background-color: ${(props) => props.theme.pageColor};
   }
-  h1,h2,h3, .social_icon, .writer_name, .skill_box_title, span , a , .edit_form, .date{
+  h1,h2,h3,h4, .social_icon, .writer_name, .skill_box_title, span , a , .edit_form, .date{
     color:${(props) => props.theme.fontColor};
   }
   .divider{
@@ -74,10 +74,10 @@ body{
     color:${(props) => props.theme.fontColor};
     &:hover {
       color:${(props) => props.theme.fontColor};
-      opacity: 0.5;
-      box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.2);
+      color: ${SUB_COLOR};
     }
   }
+  
 }
 
 .ant-row {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { CardContents, SUB_COLOR } from "../../config";
 import Col from "antd/lib/col";
@@ -17,6 +17,8 @@ import Footer from "./FooterSection/Footer";
 import Poster from "./NavigationSection/Poster";
 import Navigation from "./NavigationSection/Navigation";
 import { SquareBottom, SquareLeft, SquareRight, SquareTop } from "../_common/Square";
+import { useDispatch } from "react-redux";
+import { LOAD_PORTFOLIOS } from "../../../_reducers";
 
 const Img = styled.img`
   width: 170px;
@@ -112,6 +114,14 @@ const MobileHome = styled.div`
 `;
 
 const MainPage = ({ mobileSize }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({
+      type: LOAD_PORTFOLIOS,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const pageComponent = () => {
     return (
       <PageWrapper>
