@@ -363,4 +363,257 @@ h2 {
     font-size: 0.64rem;
   }
 }
+
+.slick-arrow {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.blog_header_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.blog_header_ul .icon {
+  font-size: 1.5rem;
+}
+
+.blog_header_li {
+  margin-right: 2.5rem;
+}
+
+.blog_header_li:last-child {
+  margin-right: 0;
+}
+
+.blog_header_about {
+  cursor: pointer;
+  width: 100%;
+  height: 300px;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: white;
+}
+
+.blog_bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+      grid-template-areas: "hd hd sub1 sub1" "hd hd sub2 sub3";
+  margin: 4rem 0;
+  row-gap: 0.5rem;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.blog_bottom_card {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.blog_bottom_card:hover .blog_bottom_img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blog_bottom_card:hover .blog_bottom_cover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.blog_bottom_card_title {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.blog_bottom_img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.blog_bottom_cover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.blog_aside {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog_aside_tag {
+  margin: 0;
+  padding: 1rem;
+}
+
+.blog_aside_tag li {
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.blog_aside_tag li:last-child {
+  margin-right: 0;
+}
+
+.blog_aside .icon {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.blog_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+  height: 120px;
+  background-color: #121212;
+}
+
+.blog_footer_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1120px;
+  color: white;
+  height: 100%;
+  padding: 3rem 0;
+}
+
+.blog_footer_wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.blog_footer_wrapper li:last-child {
+  margin-right: 0;
+}
+
+.blog_footer_wrapper li a {
+  color: white;
+}
+
+.blog_footer_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog_footer_content li {
+  padding: 0.7rem 1.5rem;
+}
+
+.article {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.article li {
+  margin-right: 0.5rem;
+}
+
+.article li:last-child {
+  margin-right: 0;
+}
+
+.article ul {
+  margin: 0;
+}
+
+.article:hover .article_desc {
+  text-decoration: underline;
+}
+
+.article:hover .article_img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.article_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 332px;
+}
+
+.article_aside {
+  font-size: 0.8rem;
+}
+
+.article_aside_header {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.article_img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+
+.article_header {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+}
+
+.article_desc {
+  margin: 1rem 0;
+}
+
+.article_footer {
+  color: rgba(0, 0, 0, 0.3);
+}
 /*# sourceMappingURL=style.css.map */

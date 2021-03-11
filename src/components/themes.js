@@ -103,101 +103,106 @@ h2{
   display:none !important;
 }
 
-.ant-input {
-  background-color: ${(props) => props.theme.pageColor} !important;
-  color:${(props) => props.theme.fontColor};
-}
-
-.ant-input-wrapper   {
-& .ant-input:focus {
-  border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
-& .ant-input:hover {
-  border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
-}
-
-.ant-input-affix-wrapper   {
-&:focus {
-  border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
-&:hover {
-  border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
-}
-
-.ant-input-affix-wrapper-focused {
-border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
 
 
-.ant-input-group-addon  {
-button:focus{
-  border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
-button:hover{
-  border: 1px solid ${SUB_COLOR} !important;
-box-shadow: none;
-}
 
-}
-.ant-pagination-item-link{
-  color:${(props) => props.theme.fontColor}!important;
-  background-color: ${(props) => props.theme.pageColor} !important;
-&:hover{
-  color:${SUB_COLOR};
-  border: 1px solid ${SUB_COLOR} !important;
-  span{
-    color:${SUB_COLOR};
-  }
-}
-}
 
-.ant-pagination-item{
-  color:${(props) => props.theme.fontColor}!important;
-  background-color: ${(props) => props.theme.pageColor} !important;
-&:hover{
-  color:${SUB_COLOR};
-  border: 1px solid ${SUB_COLOR} !important;
-}
-&:focus{
-  color:${SUB_COLOR};
-  border: 1px solid ${SUB_COLOR} !important;
-}
-a:hover {
-  color:${SUB_COLOR};
-}
-}
 
-.ant-pagination-item-active {
-  color:${(props) => props.theme.fontColor}!important;
-  background-color: ${(props) => props.theme.pageColor} !important;
-border: 1px solid ${SUB_COLOR} !important;
-a{
-  color: ${SUB_COLOR} !important;
-}
-}
-
-.ant-btn {
-  background-color: ${(props) => props.theme.pageColor} !important;
-&:hover{
-  color:${SUB_COLOR};
-  border: 1px solid ${SUB_COLOR} !important;
-}
-&:focus{
-  color:${SUB_COLOR};
-  border: 1px solid ${SUB_COLOR} !important;
-}
-}
-  
-.ant-input-search-button{
-  background-color: ${(props) => props.theme.pageColor} !important;
-  span {color:${(props) => props.theme.fontColor};}
-}
 `;
+
+// .ant-input {
+//   background-color: ${(props) => props.theme.pageColor} !important;
+//   color:${(props) => props.theme.fontColor};
+// }
+
+// .ant-input-group-addon  {
+//   button:focus{
+//     border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+//   button:hover{
+//     border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+
+//   }
+//   .ant-pagination-item-link{
+//     color:${(props) => props.theme.fontColor}!important;
+//     background-color: ${(props) => props.theme.pageColor} !important;
+//   &:hover{
+//     color:${SUB_COLOR};
+//     border: 1px solid ${SUB_COLOR} !important;
+//     span{
+//       color:${SUB_COLOR};
+//     }
+//   }
+//   }
+
+//   .ant-pagination-item{
+//     color:${(props) => props.theme.fontColor}!important;
+//     background-color: ${(props) => props.theme.pageColor} !important;
+//   &:hover{
+//     color:${SUB_COLOR};
+//     border: 1px solid ${SUB_COLOR} !important;
+//   }
+//   &:focus{
+//     color:${SUB_COLOR};
+//     border: 1px solid ${SUB_COLOR} !important;
+//   }
+//   a:hover {
+//     color:${SUB_COLOR};
+//   }
+//   }
+
+//   .ant-pagination-item-active {
+//     color:${(props) => props.theme.fontColor}!important;
+//     background-color: ${(props) => props.theme.pageColor} !important;
+//   border: 1px solid ${SUB_COLOR} !important;
+//   a{
+//     color: ${SUB_COLOR} !important;
+//   }
+//   }
+
+//   .ant-input-search-button{
+//     background-color: ${(props) => props.theme.pageColor} !important;
+//     span {color:${(props) => props.theme.fontColor};}
+//   }
+
+// .ant-input-wrapper   {
+//   & .ant-input:focus {
+//     border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+//   & .ant-input:hover {
+//     border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+//   }
+
+//   .ant-input-affix-wrapper   {
+//   &:focus {
+//     border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+//   &:hover {
+//     border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+//   }
+
+//   .ant-input-affix-wrapper-focused {
+//   border: 1px solid ${SUB_COLOR} !important;
+//   box-shadow: none;
+//   }
+
+//   .ant-btn {
+//     background-color: ${(props) => props.theme.pageColor} !important;
+//   &:hover{
+//     color:${SUB_COLOR};
+//     border: 1px solid ${SUB_COLOR} !important;
+//   }
+//   &:focus{
+//     color:${SUB_COLOR};
+//     border: 1px solid ${SUB_COLOR} !important;
+//   }
+//   }

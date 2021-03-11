@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
 import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import MainPage from "./views/MainPage/MainPage";
+import PortfolioMainPage from "./views/PortfolioMainPage/PortfolioMainPage";
 import { ThemeProvider } from "styled-components";
-import PortfolioPage from "./views/MainPage/PortfolioSection/PortfolioPage";
+import PortfolioPostPage from "./views/PortfolioMainPage/PortfolioSection/PortfolioPostPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { darkTheme, lightTheme, GlobalStyles } from "./themes";
+import BlogMainPage from "./views/BlogMainPage/BlogMainPage";
 
 const App = () => {
   const [mobileSize, setmobileSize] = useState(null);
@@ -34,11 +35,12 @@ const App = () => {
       <GlobalStyles />
       <Suspense fallback={<div>Loading...</div>}>
         <BrowserRouter>
-          <Route exact path="/" render={() => <MainPage mobileSize={mobileSize} />} />
+          <Route exact path="/" render={() => <PortfolioMainPage mobileSize={mobileSize} />} />
+          <Route exact path="/blog" component={BlogMainPage} />
           <Route
             exact
             path="/portfolio/:id"
-            render={() => <PortfolioPage mobileSize={mobileSize} />}
+            render={() => <PortfolioPostPage mobileSize={mobileSize} />}
           />
         </BrowserRouter>
       </Suspense>
