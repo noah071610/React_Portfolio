@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import React, { Suspense, useEffect, useState } from "react";
-import { BrowserRouter, Route, useHistory } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import PortfolioMainPage from "./views/PortfolioMainPage/PortfolioMainPage";
 import { ThemeProvider } from "styled-components";
 import PortfolioPostPage from "./views/PortfolioMainPage/PortfolioSection/PortfolioPostPage";
@@ -9,8 +9,8 @@ import "aos/dist/aos.css";
 import { darkTheme, lightTheme, GlobalStyles } from "./themes";
 import BlogMainPage from "./views/BlogMainPage/BlogMainPage";
 import BlogTechPage from "./views/BlogMainPage/BlogTechPage/BlogTechPage";
-import PageWrapper from "./views/BlogMainPage/_common/PageWrapper";
 import BlogPostPage from "./views/BlogMainPage/BlogPostPage/BlogPostPage";
+import BlogClassPage from "./views/BlogMainPage/BlogClassPage/BlogClassPage";
 
 const App = () => {
   const [mobileSize, setmobileSize] = useState(null);
@@ -39,6 +39,8 @@ const App = () => {
         <BrowserRouter>
           <Route exact path="/" component={BlogMainPage} />
           <Route exact path="/tech" component={BlogTechPage} />
+          <Route exact path="/daily" component={BlogTechPage} />
+          <Route exact path="/class" component={BlogClassPage} />
           <Route exact path="/post/:id" component={BlogPostPage} />
           <Route
             exact

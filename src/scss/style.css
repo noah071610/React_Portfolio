@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100&display=swap");
 html,
 body,
 div,
@@ -81,10 +83,10 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Rubik", sans-serif;
   vertical-align: baseline;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Rubik", "Kosugi Maru", "Nanum Gothic Coding", sans-serif, monospace;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -380,6 +382,10 @@ h1 {
   font-size: 4rem;
 }
 
+.space {
+  height: 5rem;
+}
+
 .slick-arrow {
   display: none;
 }
@@ -408,6 +414,16 @@ h1 {
 
 .static {
   position: static;
+}
+
+.class_list {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.class_list:hover {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .blog_header_social {
@@ -613,6 +629,12 @@ h1 {
 
 .blog_footer_content li {
   padding: 0.7rem 1.5rem;
+}
+
+.blog_class_title {
+  font-size: 2rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .article {
