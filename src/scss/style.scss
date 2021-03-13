@@ -141,45 +141,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-a {
-  color: black;
-  text-decoration: none;
-  &:hover {
-    color: black;
-  }
-}
-
-h2 {
-  margin: 0;
-  font-size: 1.2rem;
-}
 
 // main
-.box {
-  width: 250px;
-  height: 250px;
-  border-radius: 12px;
-  background-color: khaki;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
-}
 
-.nav_header {
-  width: 93%;
-  top: -100%;
-  height: 3.125rem;
-  transition: 0.5s;
-  margin-bottom: 3rem;
-}
 .btn_title {
   transition: all 0.3s;
 }
+
 .marker {
   font-weight: bold;
   background: linear-gradient(to top, $MAIN_COLOR 5%, transparent 30%);
-}
-
-.ant-table th {
-  background-color: #d5f7e6 !important;
 }
 
 .focus {
@@ -217,31 +188,31 @@ h2 {
 
 .slider-left {
   position: absolute;
-  left: -30% !important;
-  width: 30% !important;
+  left: -30%;
+  width: 30%;
   div {
     display: none;
   }
 }
 
 .slider-right {
-  position: absolute !important;
-  left: 100% !important;
-  width: 30% !important;
+  position: absolute;
+  left: 100%;
+  width: 30%;
   div {
     display: none;
   }
 }
 
 .react-3d-carousel {
-  height: 350px !important;
+  height: 380px !important;
   @media only screen and (max-width: 992px) {
     height: 300px !important;
   }
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 650px) {
     height: 200px !important;
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 460px) {
     height: 170px !important;
   }
 }
@@ -268,17 +239,11 @@ h2 {
 }
 
 .is-current {
-  border-left: 5px solid $SUB_COLOR;
-  transition: all 0.3s;
-  @media only screen and (max-width: 992px) {
-    border-left: none;
-    border-bottom: 3px solid $SUB_COLOR;
-    width: 100% !important;
-    span {
-      display: block;
-      margin-left: 1rem;
-    }
+  a,
+  span {
+    color: #1187cf;
   }
+  transition: all 0.3s;
 }
 
 .portfolio_search {
@@ -311,15 +276,23 @@ h2 {
 
 .portfolio_intro {
   display: block;
-  text-align: start;
-  margin-top: 3rem;
+  text-align: center;
   line-height: 2;
   font-size: 0.8rem;
-  @media only screen and (max-width: 992px) {
-    text-align: center;
-  }
   @media only screen and (max-width: 420px) {
     font-size: 0.64rem;
+  }
+}
+
+.portfolio_poster_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    h2 {
+      -webkit-animation: bounce 1s;
+      animation: bounce 1s;
+    }
   }
 }
 
@@ -344,7 +317,7 @@ h1 {
 }
 
 .slick-arrow {
-  display: none;
+  display: none !important;
 }
 
 .display {
@@ -369,14 +342,6 @@ h1 {
   position: static;
 }
 
-.class_list {
-  transition: all 0.3s;
-  &:hover {
-    color: black;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
-
 .blog {
   &_header {
     &_social {
@@ -399,7 +364,7 @@ h1 {
     &_about {
       cursor: pointer;
       width: 100%;
-      height: 300px;
+      height: 100%;
       padding: 2rem;
       margin-top: 2rem;
       background-color: white;
@@ -527,10 +492,39 @@ h1 {
   }
 
   &_class {
-    &_title {
-      font-size: 2rem;
-      padding-left: 0.5rem;
-      margin-bottom: 1rem;
+    &_poster {
+      &_title {
+        font-size: 2rem;
+      }
+      &_cha {
+        &:hover {
+          -webkit-animation: pulse 0.5s;
+          animation: pulse 0.5s;
+        }
+      }
+    }
+    &_list {
+      width: 100%;
+      display: flex;
+      padding: 0.5rem;
+      transition: all 0.3s;
+      span {
+        transition: all 0.1s linear;
+      }
+      &:hover {
+        color: black;
+        span {
+          transform: scale(0.97);
+        }
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+    &_imadoki {
+      &_contents {
+        cursor: pointer;
+        background-color: gray;
+        color: gray;
+      }
     }
   }
 }
