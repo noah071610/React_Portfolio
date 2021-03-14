@@ -622,8 +622,8 @@ h1 {
 
 .blog_class_imadoki_contents {
   cursor: pointer;
-  background-color: gray;
-  color: gray;
+  background-color: #cccccc;
+  color: #cccccc;
 }
 
 .article {

@@ -76,25 +76,21 @@ export const dataSource = [
 export const navContents = [
   {
     icon: faAddressCard,
-    intro: "",
     explain: "About me",
     name: "aboutme",
   },
   {
     icon: faLaptop,
-    intro: "Know about my skill-set 👨‍💼",
     explain: "Skills",
     name: "skills",
   },
   {
     icon: faImages,
-    intro: "Teste my portfolio 🖼️",
     explain: "Portfolio",
     name: "portfolio",
   },
   {
     icon: faEnvelope,
-    intro: "Are you interested in me? 📭",
     explain: "Contact",
     name: "contact",
   },
@@ -102,12 +98,6 @@ export const navContents = [
 
 // Skill page
 export const skills = [
-  {
-    name: "Sketch",
-    src: "https://img.icons8.com/plasticine/100/000000/sketch.png",
-    desc: "스케치를 활용하여 UI/UX 웹사이트의 표본을 디자인합니다.",
-    level: false,
-  },
   {
     name: "Html",
     src: "https://img.icons8.com/color/144/000000/html-5.png",
@@ -126,12 +116,7 @@ export const skills = [
     desc: "기본문법부터 ES6 최신문법과 클로저,This,이벤트루프등 독특한 JS특성을 폭넓게 이해합니다.",
     level: true,
   },
-  {
-    name: "J-Query",
-    src: "https://img.icons8.com/ios-filled/150/000000/jquery.png",
-    desc: "제이쿼리 문법해석과 셀렉터에 기본적 의미를 이해합니다.",
-    level: false,
-  },
+
   {
     name: "Type Script",
     src: "https://img.icons8.com/color/144/000000/typescript.png",
@@ -143,6 +128,31 @@ export const skills = [
     src: "https://img.icons8.com/color/144/000000/react-native.png",
     desc: "React 와 Hooks 문법, Redux와 Router 적용, 그리고 jsx 와 SPI 의 특성을 이해합니다.",
     level: true,
+  },
+
+  {
+    name: "Git",
+    src: "https://img.icons8.com/nolan/128/github.png",
+    desc: "형상관리의 기본원리와 버전관리,브랜치,백업등을 적극 활용합니다.",
+    level: true,
+  },
+];
+
+export const sub_skills = [
+  {
+    name: "Photoshop",
+    src: "https://img.icons8.com/color/144/000000/adobe-photoshop.png",
+    desc: "스케치를 활용하여 UI/UX 웹사이트의 표본을 디자인합니다.",
+  },
+  {
+    name: "Sketch",
+    src: "https://img.icons8.com/plasticine/100/000000/sketch.png",
+    desc: "스케치를 활용하여 UI/UX 웹사이트의 표본을 디자인합니다.",
+  },
+  {
+    name: "J-Query",
+    src: "https://img.icons8.com/ios-filled/150/000000/jquery.png",
+    desc: "제이쿼리 문법해석과 셀렉터에 기본적 의미를 이해합니다.",
   },
   {
     name: "Nodejs",
@@ -157,58 +167,49 @@ export const skills = [
     level: true,
   },
   {
-    name: "Git",
-    src: "https://img.icons8.com/nolan/128/github.png",
-    desc: "형상관리의 기본원리와 버전관리,브랜치,백업등을 적극 활용합니다.",
-    level: true,
+    name: "MongoDB",
+    src: "https://img.icons8.com/color/144/000000/mongodb.png",
+    desc: "스키마 정의와 데이터베이스관계도를 이해하고 테이블을 생성,수정하고 관리합니다.",
+  },
+  {
+    name: "Postman",
+    src: "https://miro.medium.com/max/512/1*fVBL9mtLJmHIH6YpU7WvHQ.png",
+    desc: "스키마 정의와 데이터베이스관계도를 이해하고 테이블을 생성,수정하고 관리합니다.",
+  },
+  {
+    name: "Express",
+    src: "https://www.mementotech.in/assets/images/icons/express.png",
+    desc: "스키마 정의와 데이터베이스관계도를 이해하고 테이블을 생성,수정하고 관리합니다.",
   },
 ];
 
-export const eng_content = (
+export const eng_desc = (
   <div>
     <p>· 개요: 문화체육관광부에서 실시하는 통역분야의 유일한 국가공인자격증(출처:Q-Net)</p>
     <p>· 취득당시 어학점수: TOEIC 925점(2018년 취득, 기간만료)</p>
   </div>
 );
-export const jap_content = (
+export const jap_desc = (
   <div>
     <p>· 개요: 문화체육관광부에서 실시하는 통역분야의 유일한 국가공인자격증(출처:Q-Net)</p>
     <p>· 취득당시 어학점수: JLPT1급(2019년 취득)</p>
   </div>
 );
 
-export const LAG_ENG = (
-  <>
-    <Popover content={eng_content} title="영어통역안내사란❓" className="focus">
-      영어통역안내사&nbsp;
-      <FontAwesomeIcon icon={faQuestionCircle} />
-    </Popover>
-    &nbsp;국가전문자격증 보유 (2020년)
-  </>
-);
-export const LAG_JAP = (
-  <>
-    <Popover content={jap_content} title="일본어통역안내사란❓" className="focus">
-      일본어통역안내사&nbsp;
-      <FontAwesomeIcon icon={faQuestionCircle} />
-      &nbsp;&nbsp;
-    </Popover>
-    &nbsp;국가전문자격증 보유 (2019년)
-  </>
-);
-
 export const languages = [
   {
     name: "English",
     src: "https://img.icons8.com/color/96/000000/usa-circular.png",
-    desc: LAG_ENG,
-    level: "high",
+    popup: true,
+    licenseKor: "영어",
+    content: eng_desc,
   },
   {
     name: "Japanese",
     src: "https://img.icons8.com/color/96/000000/japan-circular.png",
-    desc: LAG_JAP,
-    level: "high",
+    popup: true,
+    licenseKor: "일본어",
+    content: jap_desc,
   },
 ];
 
