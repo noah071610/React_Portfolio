@@ -11,6 +11,7 @@ import BlogTechPage from "./views/BlogMainPage/BlogTechPage/BlogTechPage";
 import BlogPostPage from "./views/BlogMainPage/BlogPostPage/BlogPostPage";
 import BlogClassPage from "./views/BlogMainPage/BlogClassPage/BlogClassPage";
 import PageWrapper from "./views/BlogMainPage/_common/PageWrapper";
+import BlogLoginPage from './views/BlogMainPage/BlogLoginPage/BlogLoginPage';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -56,6 +57,7 @@ const App = () => {
             <Route exact path="/tech" component={BlogTechPage} />
             <Route exact path="/daily" component={BlogTechPage} />
             <Route exact path="/class" component={BlogClassPage} />
+            <Route exact path="/login" component={BlogLoginPage} />
             <Route exact path="/post/:id" component={BlogPostPage} />
             <Route exact path="/portfolio" component={PortfolioMainPage} />
             <Route exact path="/portfolio/:id" component={PortfolioPostPage} />
