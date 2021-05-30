@@ -9,8 +9,7 @@
 
 **😙 포트폴리오 프로젝트가 담겨있는 Noah-World Blog 를 확인해주세요.**
 
-- 👉 [프로젝트 Noah-World Next.js 버전 바로가기](https://github.com/noah071610/Next_Noahworld)<br/>
-- 👉 [프로젝트 Noah-World React 버전 바로가기](https://github.com/noah071610/Next_Noahworld)
+- 👉 [프로젝트 Noah-World 바로가기](https://github.com/noah071610/Next_Noahworld)<br/>
 
 <br/>
 
